@@ -1,0 +1,51 @@
+alignment top_left
+gap_x 20
+gap_y 340
+background yes
+border_width 1
+cpu_avg_samples 2
+default_color aaa
+default_outline_color aaa
+default_shade_color 333
+default_bar_size 186 15
+default_graph_size 186 25
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades yes
+use_xft yes
+xftfont aquafont
+minimum_size 5 5
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window no
+own_window_class Conky
+own_window_type desktop
+stippled_borders 0
+update_interval 5
+double_buffer yes
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+
+#--------------------------------------------------
+# lua_load ~/.conky/rings.lua 
+# lua_draw_hook_pre main
+#-------------------------------------------------- 
+
+
+TEXT
+${if_empty ${exec grep yes /proc/acpi/battery/BAT0/state}}
+
+$else${battery_bar}
+  Battery $battery$endif
+
+${if_empty ${exec cat /proc/net/wireless | grep wlan0}} $else${font aquafont:size=19}${addr wlan0}${font}
+${alignr 30}for ${font aquafont:size=19}wlan0${font}$endif
+${if_empty ${exec cat /proc/net/arp | grep eth0}}$else${font aquafont:size=19}$addr${font}
+${alignr 30}for ${font aquafont:size=19}eth0${font}$endif
+${font freeserif}${head schedule 20 30}${font}

@@ -1,0 +1,73 @@
+alignment top_left
+gap_x 20
+gap_y 40
+background yes
+border_width 1
+cpu_avg_samples 2
+default_color aaa
+default_outline_color aaa
+default_shade_color 111
+default_bar_size 186 15
+default_graph_size 186 25
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades yes
+use_xft yes
+xftfont FreeSerif:size=10
+minimum_size 5 5
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window no
+own_window_class Conky
+own_window_type desktop
+stippled_borders 0
+update_interval 1.5
+double_buffer yes
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+
+#--------------------------------------------------
+# lua_load ~/.conky/rings.lua 
+# lua_draw_hook_pre main
+#-------------------------------------------------- 
+
+
+TEXT
+${battery_bar}
+$alignr Battery $battery   
+
+${font FreeSerif:size=19}${addr wlan0}${font}
+${alignr 30}for ${font FreeSerif:size=19}wlan0${font}
+${font FreeSerif:size=19}$addr${font}
+${alignr 30}for ${font FreeSerif:size=19}eth0${font}
+${voffset 6}${font FreeSerif:size=15}Brain${font}${voffset -6} is ${font FreeSerif:size=19}busy:${font}
+${hr}
+${font FreeSerif:size=13}${top pid 1} ${top name 1}${alignr}${top cpu 1}${font}
+${top pid 2} ${top name 2}$alignr${top cpu 2}
+${top pid 3} ${top name 3}$alignr${top cpu 3}
+
+Disk is ${font FreeSerif:size=15}busy${font} too:
+${diskiograph}
+
+Skies are ${font FreeSerif:size=19}${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDK cloud_cover}${font} ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDK weather} in Cologne
+${font FreeSerif:size=19}${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDK temperature}°C${font} ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDK pressure} mbar ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDK humidity}% rh
+Wind ${font FreeSerif:size=19}${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDK wind_speed} km/h${font} ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDK wind_dir}
+
+TO${font FreeSerif:size=20}DO${font}
+${voffset -10}${hr}
+${voffset -10}
+${head todo 20 30}
+${font FreeSerif:size=20}Note${font}s
+${voffset -10}${hr}
+${voffset -10}
+${head notes 20 30}
+${font FreeSerif:size=20}Sched${font}ule
+${voffset -10}${hr}
+${voffset -10}
+${head schedule 20 30}
