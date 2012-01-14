@@ -1,0 +1,4 @@
+g:Tex_CompileRule_pdf    'pdflatex -interaction=nonstopmode $*'
+g:Tex_CompileRule_dvi    'latex -interaction=nonstopmode $*'
+g:Tex_CompileRule_ps     'ps2pdf $*'
+"TCTarget=pdf
