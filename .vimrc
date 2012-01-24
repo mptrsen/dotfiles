@@ -19,6 +19,7 @@ map <Space> :noh<cr>
 set encoding=utf-8
 set t_Co=256
 set autoindent
+"set expandtab	" insert spaces for tabs
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -65,7 +66,7 @@ filetype plugin on
 
 syntax on
 syntax match Tab /\t/
-colorscheme desert256
+colorscheme zmrok
 
 " for latex-suite
 let g:tex_flavor='latex'
@@ -93,7 +94,7 @@ autocmd VimEnter * call RestoreSession()
 
 function! SwitchColorscheme()
 	if g:colors_name == 'vexorian'
-		:colorscheme desert256
+		:colorscheme zmrok
 	else
 		:colorscheme vexorian
 	endif

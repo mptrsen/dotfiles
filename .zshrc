@@ -33,6 +33,7 @@ alias smbfind=findsmb
 alias ge=geeqie
 export WISECONFIGDIR=/home/malty/thesis/hamstrsearch_local_v8_mpmod/wisecfg/
 export PERL5LIB=/home/malty/local/share/perl5
+export EDITOR=/usr/bin/vim
 alias f=find
 alias ll='ls -l'
 alias la='ls -a'
