@@ -14,6 +14,7 @@ hi Normal         guifg=#F8F8F8    guibg=#141414
 hi Cursor         guifg=Black      guibg=Green    gui=none
 hi LineNr         guifg=#777777    guibg=Black
 hi NonText 		  guifg=#808080    guibg=#202020
+hi Folded         guifg=#DFCC77    guibg=#505050
 
 hi StatusLine 	guifg=#F8F8F8 guibg=#202020 gui=bold
 hi StatusLineNC guifg=#777777 guibg=#202020 gui=none

@@ -1,7 +1,5 @@
-<+	+>	!comp!	!exe!
-%        File: !comp!expand("%:p:t")!comp!
-%     Created: !comp!strftime("%a %Y-%m-%d %h:%m ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
-% Last Change: !comp!strftime("%a %Y-%m-%d %h:%m ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%     Created: Fri 2012-02-10 Feb:02 C
+% Last Change: Fri 2012-02-10 Feb:02 C
 %
 \documentclass[a4paper]{scrartcl}
 \usepackage[T1]{fontenc}			% International font encoding
@@ -12,56 +10,54 @@
 % \usepackage{lmodern}					% font looks better on screen
 % \usepackage{microtype}				% even better
 % \usepackage[cm]{fullpage}			% more space on the page
-% \usepackage{natbib}
-% \bibpunct{[}{]}{,}{n}{}{;}		% citing format:
-															% 1. opening bracket symbol, default = (
-															% 2. closing bracket symbol, default = )
-															% 3. punctuation between multiple citations, default = ;
-															% 4. 'n' for numerical style, 's' for numerical superscript style, default = author-year;
-															% 5. punctuation between the author names and the year
-															% 6. punctuation between years or numbers when common author lists are suppressed (default = ,);
+% \usepackage{natbib}           % additional citation styles
+% \bibpunct{[}{]}{,}{n}{}{;}		% customize citing format:
+% 1. opening bracket symbol, default = (
+% 2. closing bracket symbol, default = )
+% 3. punctuation between multiple citations, default = ;
+% 4. 'n' for numerical style, 's' for numerical superscript style, default = author-year;
+% 5. punctuation between the author names and the year
+% 6. punctuation between years or numbers when common author lists are suppressed (default = ,);
 
 % Math symbols and stuff
 %--------------------------------------------------
 % \usepackage{amsmath}					% all the fancy math stuff
 % \usepackage{amssymb}					% more math symbols
 % \usepackage{wasysym}					% even MORE math symbols
-% \usepackage{upgreek}					% upright Greek letters
+% \usepackage{upgreek}          % upright Greek letters
 
 % Enhanced formatting
 %--------------------------------------------------
 % \usepackage{color}						% enable color
 % \usepackage{colortbl}					% colored tables
+% \usepackage{tabularx}					% more options for tables
 % \usepackage{graphicx}					% fancy graphics
 % \usepackage{wrapfig}					% wrap figures
-% \usepackage{tabularx}					% better tables
 % \usepackage{enumerate}				% customize numbered lists
 % \usepackage{tocloft}					% fancy table of content
 % \usepackage{caption}					% extended captioning, e.g. without numbers
-% \usepackage{fancyhdr}					% fancy header customisation
-% \usepackage[parfill]{parskip} % vspace instead of indentation
+% \usepackage{fancyhdr}					% fancy header customization
+% \usepackage[parfill]{parskip} % vspace instead of indentation in new paragraphs
 % \usepackage{geometry}					% customize page size, margins etc
+% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}	% dots in TOC
 
 % Extra stuff, glossary, index etc
 %--------------------------------------------------
 % \usepackage{glossaries}				% glossaries
 % \usepackage{makeidx}					% index
 % \usepackage{showidx}					% print index items for debugging
-% \usepackage{url}
-% \usepackage{hyperref} 				% should be loaded last
+% \usepackage{url}              % URLs
+% \usepackage{hyperref}					% hyperlinks; should be loaded last
 % \usepackage{syntonly}					% check for syntax only; much faster
 % \syntaxonly										% comment if output is desired
-% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}	% dots in TOC
 
 % Stuff that doesn't fit in any category
-% \usepackage{lastpage}					% provides total number of pages, use with:
-%																% \pageref{LastPage}
+% \usepackage{lastpage}					% provides total number of pages in \pageref{LastPage}
 %-------------------------------------------------- 
-
 \title{<++>}
 \subtitle{<++>}
 \author{<++>}
-
+\date{\today}
 \begin{document}
 \maketitle
 <++>

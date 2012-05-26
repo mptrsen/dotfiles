@@ -379,6 +379,6 @@ run_once("gnome-power-manager > /dev/null")
 run_once("system-config-printing-applet")
 run_once("gnome-screensaver")
 run_once("liferea")
-run_once("update-notifier")
+--run_once("update-notifier")
 
 -- }}}

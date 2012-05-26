@@ -24,7 +24,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set bg=dark
-set paste 	"paste without auto-indent breaking stuff
+"set paste 	"paste without auto-indent breaking stuff
 set viewoptions=cursor,folds
 set diffopt=vertical
 set foldmethod=marker
@@ -32,7 +32,7 @@ set foldminlines=2	"display 2 lines for a closed fold
 set foldnestmax=3
 "set ignorecase	"ignore case while searching - sucks, I like it that way
 set hidden	" allow switching to buffers without saving; also preserves undo list
-set guioptions=mt " need only tabs and menubar in gvim
+set guioptions=t " need only tabs in gvim by default
 set printfont=courier:h8
 set printoptions=paper:a4,left:10mm,right:10mm,top:10mm,bottom:10mm,number:y
 set laststatus=2
@@ -41,6 +41,7 @@ set incsearch	" incremental search
 set winaltkeys=no	" disable menu shortcuts in gvim
 set directory=.,~/tmp,/var/tmp,/tmp	" where to save swap files
 set backupdir=.,~/tmp,/var/tmp,/tmp	" where to backup files
+set wildmenu	" enhanced tab-completion
 
 "--------------------------------------------------
 " Status line
@@ -93,10 +94,10 @@ endfunction
 autocmd VimEnter * call RestoreSession()
 
 function! SwitchColorscheme()
-	if g:colors_name == 'vexorian'
-		:colorscheme zmrok
-	else
+	if g:colors_name != 'vexorian'
 		:colorscheme vexorian
+	else
+		:colorscheme zmrok
 	endif
 endfunction
 " other nice light colorschemes:
@@ -108,6 +109,7 @@ endfunction
 " darkburn
 " oceanblack
 " zmrok
+" ir_black
 
 " Templates
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/template.%:e

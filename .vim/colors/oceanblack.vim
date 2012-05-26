@@ -74,13 +74,13 @@ hi String gui=None guifg=#80a0ff guibg=bg
 highlight Identifier    guifg=LightSkyBlue3
 hi Function gui=None guifg=DarkSeaGreen3 guibg=bg
 
-highlight Statement     gui=NONE guifg=LightGreen
-    highlight Conditional gui=None guifg=LightGreen guibg=bg
-    highlight Repeat gui=None guifg=SeaGreen2 guibg=bg
+highlight Statement     gui=bold guifg=LightGreen
+    highlight Conditional gui=bold guifg=LightGreen guibg=bg
+    highlight Repeat gui=bold guifg=SeaGreen2 guibg=bg
     "hi Label gui=None guifg=LightGreen guibg=bg
-    highlight Operator gui=None guifg=Chartreuse guibg=bg
-    highlight Keyword gui=None guifg=LightGreen guibg=bg
-    highlight Exception gui=None guifg=LightGreen guibg=bg
+    highlight Operator gui=bold guifg=Chartreuse guibg=bg
+    highlight Keyword gui=bold guifg=LightGreen guibg=bg
+    highlight Exception gui=bold guifg=LightGreen guibg=bg
 
 highlight PreProc       guifg=SkyBlue1
 hi Include gui=None guifg=LightSteelBlue3 guibg=bg

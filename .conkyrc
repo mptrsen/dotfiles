@@ -1,6 +1,6 @@
 alignment top_left
-gap_x 20
-gap_y 340
+gap_x 1220
+gap_y 750
 background yes
 border_width 1
 cpu_avg_samples 2
@@ -14,7 +14,7 @@ draw_graph_borders yes
 draw_outline no
 draw_shades yes
 use_xft yes
-xftfont aquafont
+xftfont monofur:size=16
 minimum_size 5 5
 net_avg_samples 2
 no_buffers yes
@@ -42,10 +42,9 @@ TEXT
 ${if_empty ${exec grep yes /proc/acpi/battery/BAT0/state}}
 
 $else${battery_bar}
-  Battery $battery$endif
-
-${if_empty ${exec cat /proc/net/wireless | grep wlan0}} $else${font aquafont:size=19}${addr wlan0}${font}
-${alignr 30}for ${font aquafont:size=19}wlan0${font}$endif
+${font monofur:size=12}Battery $battery$endif
+${font monofur:size=16}
+${if_empty ${exec cat /proc/net/wireless | grep wlan0}} $else${addr wlan0}
+${alignr}for wlan0$endif
 ${if_empty ${exec cat /proc/net/arp | grep eth0}}$else${font aquafont:size=19}$addr${font}
-${alignr 30}for ${font aquafont:size=19}eth0${font}$endif
-${font freeserif}${head schedule 20 30}${font}
+${alignr}for eth0$endif
