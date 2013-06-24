@@ -7,7 +7,7 @@ require("beautiful")
 -- Notification library
 require("naughty")
 -- Load Debian menu entries
-require("debian.menu")
+--require("debian.menu")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
@@ -48,7 +48,7 @@ layouts =
 tags = {
 	settings = {
 		{ names = { "α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι" },
-			layout = { layouts[1], layouts[1], layouts[5], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1] }
+			layout = { layouts[1], layouts[5], layouts[5], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1], layouts[1] }
 		}
 	}
 }
@@ -72,7 +72,7 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "Awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "Programs", debian.menu.Debian_menu.Debian },
+--                                    { "Programs", debian.menu.Debian_menu.Debian },
                                     { "Terminal", terminal }
                                   }
                         })
@@ -208,12 +208,14 @@ globalkeys = awful.util.table.join(
         end),
 
     -- Standard programs
-    awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
-    awful.key({ modkey,           }, "c", function () awful.util.spawn(terminal) end),
-    awful.key({ modkey,           }, "Print", function () awful.util.spawn("gnome-screenshot") end),
-    awful.key({ modkey,           }, "w", function () awful.util.spawn("firefox") end),
-    awful.key({ modkey,           }, "m", function () awful.util.spawn("thunderbird") end),
-    awful.key({ modkey,           }, "e", function () awful.util.spawn("pcmanfm") end),
+    awful.key({ modkey,           }, "Return", function() awful.util.spawn(terminal) end),
+    awful.key({ modkey,           }, "c", function() awful.util.spawn(terminal) end),
+    awful.key({ modkey,           }, "Print", function() awful.util.spawn("gnome-screenshot") end),
+    awful.key({ modkey,           }, "w", function() awful.util.spawn("firefox-bin") end),
+    awful.key({ modkey,           }, "m", function() awful.util.spawn("thunderbird-bin") end),
+    awful.key({ modkey,           }, "e", function() awful.util.spawn("pcmanfm") end),
+		awful.key({ modkey,           }, "i", function() awful.util.spawn("inkscape") end),
+		awful.key({ modkey,           }, "v", function() awful.util.spawn("gvim") end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
@@ -372,13 +374,18 @@ end
 
 run_once(terminal)
 run_once("conky")
-run_once("gnome-settings-daemon")
-run_once("nm-applet")
-run_once("bluetooth-applet")
-run_once("gnome-power-manager > /dev/null")
-run_once("system-config-printing-applet")
-run_once("gnome-screensaver")
-run_once("liferea")
+-- run_once("gnome-settings-daemon")
+-- run_once("nm-applet")
+-- run_once("bluetooth-applet")
+-- run_once("gnome-power-manager > /dev/null")
+-- run_once("system-config-printing-applet")
+-- run_once("gnome-screensaver")
+-- run_once("liferea")
+run_once("xbindkeys")
+-- run_once("dropbox")
+run_once("xset r rate 160 60")
+run_once("wicd-client -t")
+run_once("gpg-agent --daemon")
 --run_once("update-notifier")
 
 -- }}}

@@ -1,6 +1,6 @@
 alignment top_left
-gap_x 1220
-gap_y 750
+gap_x 1200
+gap_y 600
 background yes
 border_width 1
 cpu_avg_samples 2
@@ -39,12 +39,13 @@ show_graph_range no
 
 
 TEXT
+${font sans:size=10}${head /home/malty/TODO 10 30}${font}
 ${if_empty ${exec grep yes /proc/acpi/battery/BAT0/state}}
 
 $else${battery_bar}
 ${font monofur:size=12}Battery $battery$endif
 ${font monofur:size=16}
-${if_empty ${exec cat /proc/net/wireless | grep wlan0}} $else${addr wlan0}
-${alignr}for wlan0$endif
-${if_empty ${exec cat /proc/net/arp | grep eth0}}$else${font aquafont:size=19}$addr${font}
-${alignr}for eth0$endif
+${if_empty ${exec grep wlan0 /proc/net/wireless}} $else${addr wlan0}
+       for wlan0$endif
+${if_empty ${exec grep eth0 /proc/net/arp}}$else${font aquafont:size=19}$addr${font}
+       for eth0$endif

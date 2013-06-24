@@ -218,3 +218,6 @@ statusbar = {
 };
 notifies = { Haenna = { }; Haenna_ = { }; Mopplethewhale = { }; };
 logs = { };
+ignores = ( 
+  { level = "JOINS PARTS QUITS"; channels = ( "#gentoo" ); }
+);

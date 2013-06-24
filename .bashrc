@@ -40,5 +40,5 @@ PS1='\[\033[01;34m\]\h\[\033[01;39m\] \w \[\033[01;33m\]\$\[\033[00m\] '
 export PERL_MB_OPT="--install_base /home/malty/perl5"
 export PERL_MM_OPT="INSTALL_BASE=/home/malty/perl5"
 export PERL5LIB="/home/malty/perl5/lib/perl5/i486-linux-gnu-thread-multi:/home/malty/perl5/lib/perl5:$PERL5LIB"
-export PATH="/home/malty/perl5/bin:$PATH"
+#export PATH="$PATH"
 export WISECONFIGDIR=~/thesis/packages/wise2.2.0/wisecfg

@@ -2,12 +2,16 @@
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-setopt appendhistory sharehistory noautoremoveslash magic_equal_subst
+setopt appendhistory sharehistory noautoremoveslash magic_equal_subst histignoredups
 unsetopt autocd beep nomatch notify 
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/malty/.zshrc'
+
+autoload -U compinit promptinit
+compinit
+promptinit; prompt gentoo
 
 # Word separators
 WORDCHARS=

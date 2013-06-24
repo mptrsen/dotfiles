@@ -30,9 +30,11 @@ set diffopt=vertical
 set foldmethod=marker
 set foldminlines=2	"display 2 lines for a closed fold
 set foldnestmax=3
-"set ignorecase	"ignore case while searching - sucks, I like it that way
+set ignorecase	"ignore case while searching 
+set smartcase	" but not if i type uppercases
 set hidden	" allow switching to buffers without saving; also preserves undo list
 set guioptions=t " need only tabs in gvim by default
+set guifont=Monospace\ 8	" have to escape the space
 set printfont=courier:h8
 set printoptions=paper:a4,left:10mm,right:10mm,top:10mm,bottom:10mm,number:y
 set laststatus=2
@@ -58,7 +60,6 @@ set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
-
 "--------------------------------------------------
 " Other settings
 "-------------------------------------------------- 
@@ -67,7 +68,7 @@ filetype plugin on
 
 syntax on
 syntax match Tab /\t/
-colorscheme zmrok
+colorscheme oceanblack
 
 " for latex-suite
 let g:tex_flavor='latex'
@@ -93,11 +94,12 @@ function! RestoreSession()
 endfunction
 autocmd VimEnter * call RestoreSession()
 
+" Color scheme switching 
 function! SwitchColorscheme()
 	if g:colors_name != 'vexorian'
 		:colorscheme vexorian
 	else
-		:colorscheme zmrok
+		:colorscheme oceanblack
 	endif
 endfunction
 " other nice light colorschemes:
