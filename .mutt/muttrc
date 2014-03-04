@@ -42,11 +42,7 @@ save-hook .* =keep			#default mbox to (s)ave mail is =keep
 #subscribe gentoo-user gentoo-dev	#subscribed to these lists
 
 # Base settings
-set spoolfile="imaps://mp@sternsegler.de@imap.gmail.com/"
-set folder="imaps://mp@sternsegler.de@imap.gmail.com/"
-set smtp_url="smtps://mp@sternsegler.de@imap.gmail.com/"
-set from="Malte Petersen <mp@sternsegler.de>"
-set record="+Sent"
+source ~/.mutt/accounts/sternsegler
 set postponed="=Drafts"
 set query_command = "lbdbq '%s'"
 
