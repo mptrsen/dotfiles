@@ -33,11 +33,15 @@ case $TERM in
         precmd () {print -Pn "\e]0;%n@%M: %~\a"}
         ;;
 esac
-alias smbfind=findsmb
-alias ge=geeqie
+
+
 export WISECONFIGDIR=/home/malty/thesis/hamstrsearch_local_v8_mpmod/wisecfg/
 export PERL5LIB=/home/malty/local/share/perl5
 export EDITOR=/usr/bin/vim
+
+alias smbfind=findsmb
+alias ge=geeqie
+alias g='grep --color'
 alias f=find
 alias ll='ls -l'
 alias la='ls -al'
@@ -45,10 +49,10 @@ alias lh='ls -lh'
 alias zmbcluster='echo "ssh mpetersen@131.220.228.166";ssh mpetersen@131.220.228.166'
 alias l=less
 alias v=vim
-alias l=less
-alias history='history -n 1000'
 alias h=head
 alias t=tail
+alias history='history -n 1000'
 alias lc='wc -l'
 alias grep='grep --color'
 alias date='date "+%a %Y-%m-%d %H:%M:%S %Z"'
+alias sqlite='python -c "import apsw;apsw.main()"'

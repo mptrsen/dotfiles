@@ -45,6 +45,8 @@ settings = {
   };
   ignores = ( { level = "JOINS QUITS"; channels = ( "#gentoo" ); } );
   notifies = {
+		zookaren = { };
+		chlorophil = { };
     Haenna = { };
     Haenna_ = { };
     Haenna__ = { };
@@ -216,7 +218,12 @@ statusbar = {
     };
   };
 };
-notifies = { Haenna = { }; Haenna_ = { }; Mopplethewhale = { }; };
+notifies = {
+  Haenna = { };
+  Haenna_ = { };
+  Mopplethewhale = { };
+  zookaren = { };
+};
 logs = { };
 ignores = ( 
   { level = "JOINS PARTS QUITS"; channels = ( "#gentoo" ); }

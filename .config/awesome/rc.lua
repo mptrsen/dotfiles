@@ -385,7 +385,6 @@ run_once("xbindkeys")
 -- run_once("dropbox")
 run_once("xset r rate 160 60")
 run_once("wicd-client -t")
-run_once("gpg-agent --daemon")
 --run_once("update-notifier")
 
 -- }}}

@@ -47,5 +47,5 @@ ${font monofur:size=12}Battery $battery$endif
 ${font monofur:size=16}
 ${if_empty ${exec grep wlan0 /proc/net/wireless}} $else${addr wlan0}
        for wlan0$endif
-${if_empty ${exec grep eth0 /proc/net/arp}}$else${font aquafont:size=19}$addr${font}
+${if_empty ${exec grep eth0 /proc/net/arp}} $else${addr eth0}
        for eth0$endif

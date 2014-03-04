@@ -6,5 +6,6 @@ xinput --disable 11
 xbindkeys
 # wallpaper setter, i like nitrogen
 nitrogen --restore
+eval $(gpg-agent --daemon)
 # awesome!
 exec awesome --config /home/malty/.config/awesome/rc.lua
