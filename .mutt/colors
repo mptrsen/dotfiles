@@ -1,0 +1,22 @@
+color attachment brightmagenta default
+color error brightred default
+color hdrdefault red default
+color indicator brightyellow red
+color markers brightcyan default
+color message brightcyan default
+color normal default default
+color quoted brightblue default
+color search default green
+color signature red default
+color status yellow blue
+color tilde magenta default
+color tree magenta default
+
+# new messages
+color index brightcyan default ~N
+
+# score-based coloring, to emulate tagging
+color index blue default "~n 1-1"
+color index green default "~n 2-3"
+color index yellow default "~n 4-7"
+color index red default "~n 8-15"
