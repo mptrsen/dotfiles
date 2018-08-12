@@ -7,7 +7,7 @@
 " This script defineds functions and key mappings to block comment code.
 " 
 " Help: 
-" In brief, use 'cc' to comment and 'cC' to uncomment.
+" In brief, use '.c' to comment and '.C' to uncomment.
 " 
 " Both commenting and uncommenting can be run on N lines at a time by 
 " using a number before the command.  They both support visual mode and 

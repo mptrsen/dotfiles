@@ -723,14 +723,14 @@ endif
 " NOTE: However, the function TexFoldTextFunction() is still avaiable
 "       and 'foldexpr' is set to point to it. This is so you can continue
 "       using another folding scheme but still use the fold text function.
-TexLet g:Tex_Folding = 1 
+TexLet g:Tex_Folding = 1
 
 " specifies whether a latex file is automatically folded up when opened. 
 " Setting this to zero means that a file is not folded up as soon as its
 " opened.
 " NOTE: the MakeTeXFolds() function will still be available (unless disabled
 "       by g:Tex_Folding), so you can do <F6> or \rf to refresh/create folds.
-TexLet g:Tex_AutoFolding = 1 
+TexLet g:Tex_AutoFolding = 0
 
 " }}}
 " ============================================================================== 

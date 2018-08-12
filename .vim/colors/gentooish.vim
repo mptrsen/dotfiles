@@ -9,7 +9,6 @@ if exists("syntax_on")
    syntax reset
 endif
 
-let g:colors_name = 'gentooish'
 
 hi Normal gui=NONE   guifg=#cccccc   guibg=#191919 ctermfg=252 ctermbg=234
 hi IncSearch gui=NONE   guifg=#000000   guibg=#8bff95 term=reverse ctermfg=16 ctermbg=120
@@ -30,7 +29,7 @@ hi DiffChange gui=NONE   guifg=NONE     guibg=#541691 term=bold ctermbg=54
 hi DiffDelete gui=NONE   guifg=#cccccc  guibg=#863132 term=bold ctermfg=252 ctermbg=95
 hi DiffAdd gui=NONE   guifg=#cccccc  guibg=#306d30 term=bold ctermfg=252 ctermbg=59
 hi Cursor gui=NONE   guifg=#000000   guibg=#8bff95 ctermfg=16 ctermbg=120
-hi Folded gui=NONE   guifg=#aa8400   guibg=#000000 term=standout ctermfg=142 ctermbg=16
+hi Folded gui=NONE   guifg=#aaa400   guibg=#000000 term=standout ctermfg=142 ctermbg=16
 hi FoldColumn gui=NONE   guifg=#cccccc   guibg=#000000 term=standout ctermfg=252 ctermbg=16
 hi Directory gui=NONE   guifg=#8bff95   guibg=NONE term=bold ctermfg=120
 hi LineNr gui=NONE   guifg=#bbbbbb   guibg=#222222 term=underline ctermfg=250 ctermbg=235

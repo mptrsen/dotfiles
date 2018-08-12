@@ -1,0 +1,11 @@
+# extract audio
+--extract-audio
+
+# audio format should be mp3
+--audio-format mp3
+
+# don't overwrite existing files
+--no-overwrites
+
+# try bypassing geo restrictions
+--geo-bypass

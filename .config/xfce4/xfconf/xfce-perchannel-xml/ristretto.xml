@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="ristretto" version="1.0">
+  <property name="window" type="empty">
+    <property name="navigationbar" type="empty">
+      <property name="position" type="string" value="left"/>
+    </property>
+    <property name="height" type="uint" value="876"/>
+    <property name="width" type="uint" value="1146"/>
+    <property name="thumbnails" type="empty">
+      <property name="size" type="uint" value="3"/>
+      <property name="show" type="bool" value="false"/>
+    </property>
+    <property name="show-clock" type="bool" value="true"/>
+    <property name="maximize-on-startup" type="bool" value="true"/>
+  </property>
+  <property name="file" type="empty">
+    <property name="current-uri" type="string" value="file:///tmp/mutt"/>
+  </property>
+  <property name="image" type="empty">
+    <property name="wrap" type="bool" value="false"/>
+    <property name="limit-quality" type="bool" value="true"/>
+  </property>
+  <property name="errors" type="empty">
+    <property name="missing-thumbnailer" type="bool" value="false"/>
+  </property>
+</channel>

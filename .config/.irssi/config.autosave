@@ -1,61 +1,19 @@
 servers = (
-  {
+  { 
     address = "irc.freenode.net";
     chatnet = "freenode";
     port = "6667";
-    password = "impulse101";
   },
-  {
-    address = "localhost";
-    chatnet = "bitlbee";
-    port = "6667";
-    password = "impulse101";
-  }
+  { address = "irc.efnet.org"; chatnet = "efnet"; port = "6667"; }
 );
 
-chatnets = {
-  freenode = { type = "IRC"; nick = "dasmalty"; };
-  bitlbee = { type = "IRC"; nick = "mp"; };
-};
+chatnets = { freenode = { type = "IRC"; }; efnet = { type = "IRC"; }; };
 
 channels = (
+  { name = "#in-ohr"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; }
 );
-
-settings = {
-  core = {
-    real_name = "Malte";
-    user_name = "malty";
-    nick = "malty";
-    quit_message = "Silveretta the jets of a lifetime...";
-    log_timestamp = "%H:%M:%S ";
-    log_open_string = "--- Log opened %Y-%m-%d %H:%M:%S";
-    log_close_string = "--- Log closed %Y-%m-%d %H:%M:%S";
-  };
-  autolog = "yes";
-  autolog_path = "~/irclogs/$tag/$0_%F.log";
-  theme = "lime";
-  "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = {
-    theme = "screwer";
-    autolog = "yes";
-    autolog_level = "all -crap -clientcrap";
-    autolog_path = "~/irclogs/$tag/$0_%F.log";
-  };
-  ignores = ( { level = "JOINS QUITS"; channels = ( "#gentoo" ); } );
-  notifies = {
-		zookaren = { };
-		chlorophil = { };
-    Haenna = { };
-    Haenna_ = { };
-    Haenna__ = { };
-    MoppleTheWhale = { };
-    Mopple = { };
-    type = "IRC";
-  };
-  beep_msg_level = "MSG";
-};
 
 aliases = {
   J = "join";
@@ -96,15 +54,13 @@ aliases = {
   GOTO = "sb goto";
   CHAT = "dcc chat";
   RUN = "SCRIPT LOAD";
-  CALC = "exec - if command -v bc >/dev/null 2>&1\\; then printf '%s=' '$*'\\; echo '$*' | bc -l\\; else echo bc was not found\\; fi";
+  CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
   SBAR = "STATUSBAR";
   INVITELIST = "mode $C +I";
   Q = "QUERY";
   "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
   EXEMPTLIST = "mode $C +e";
   ATAG = "WINDOW SERVER";
-  UNSET = "set -clear";
-  RESET = "set -default";
 };
 
 statusbar = {
@@ -132,7 +88,7 @@ statusbar = {
     prompt = "{prompt $[.15]itemname}";
     prompt_empty = "{prompt $winname}";
     topic = " $topic";
-    topic_empty = " Irssi v$J - http://www.irssi.org";
+    topic_empty = " Irssi v$J - http://irssi.org/help/";
 
     # all of these treated specially, they're only displayed when needed
     lag = "{sb Lag: $0-}";
@@ -161,7 +117,7 @@ statusbar = {
       # list of items in statusbar in the display order
       items = {
         barstart = { priority = "100"; };
-        #time = { };
+        time = { };
         user = { };
         window = { };
         window_empty = { };
@@ -218,13 +174,42 @@ statusbar = {
     };
   };
 };
+settings = {
+  core = {
+    real_name = "Malty";
+    user_name = "malty";
+    nick = "dasmalty";
+    quit_message = "Silveretta the jets of a lifetime...";
+    log_timestamp = "%H:%M:%S ";
+    log_open_string = "--- Log opened %Y-%m-%d %H:%M:%S";
+    log_close_string = "--- Log closed %Y-%m-%d %H:%M:%S";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    theme = "= hv";
+    autolog = "yes";
+    autolog_path = "~/irclogs/$chatnet-$0.log";
+  };
+  "irc/core" = { 
+    part_message = "Because the sandman just found you...";
+  };
+  "irc/flood" = { autoignore_level = " "; };
+};
 notifies = {
   Haenna = { };
   Haenna_ = { };
-  Mopplethewhale = { };
-  zookaren = { };
+  Haenna__ = { };
+  MoppleTheWhale = { };
+  Mopple = { };
 };
-logs = { };
-ignores = ( 
-  { level = "JOINS PARTS QUITS"; channels = ( "#gentoo" ); }
-);
+logs = {
+  "~/Haenna_" = {
+    level = "ALL";
+    items = ( { type = "target"; name = "Haenna_, Haenna"; } );
+  };
+  "~/irclogs/Haenna" = {
+    level = "ALL";
+    items = ( { type = "target"; name = "Haenna"; } );
+  };
+};
+ignores = ( { level = "JOINS QUITS"; channels = ( "#gentoo" ); } );

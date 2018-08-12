@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/mpetersen'
+let g:netrw_dirhist_2='/mnt/MYBOOK_A/Documents/phdthesis/approaches/repeats-in-genes'
+let g:netrw_dirhist_3='/mnt/MYBOOK_A/data/genomes/assembled/smallest-fucker-alive'
+let g:netrw_dirhist_4='/tmp'
+let g:netrw_dirhist_5='/var/tmp/orthograph-test'
+let g:netrw_dirhist_6='/home/mpetersen/Chess'
+let g:netrw_dirhist_7='/mnt/MYBOOK_B/projects/i5k/repeats-and-tes'
+let g:netrw_dirhist_8='/mnt/MYBOOK_B/projects/dynamics-of-genome-size-evolution-in-insects/doc/paper/.git'

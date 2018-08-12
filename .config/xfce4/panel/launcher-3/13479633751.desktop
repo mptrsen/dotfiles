@@ -1,0 +1,14 @@
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=terminator
+Icon=utilities-terminal
+StartupNotify=false
+Terminal=false
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+Name=Terminal Emulator
+Comment=terminator
+X-XFCE-Source=file:///usr/share/applications/exo-terminal-emulator.desktop
+Path=

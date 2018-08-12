@@ -1,20 +1,14 @@
-\input{../../Templates/letterhead}
-\KOMAoptions{
-	fromphone=false,
-	fromfax=false
-}
-\setkomavar{subject}[]{<+Subject+>}
-\setkomavar{fromaddress}{Bahnhofstr. 3\\53332 Bornheim-Sechtem}
-\setkomavar{fromphone}{02227-904925}
-\setkomavar{fromfax}{040-72692934}
-\setkomavar{place}{Sechtem}
-\setkomavar{date}{\today}
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %Y-%m-%d %h:%m ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %Y-%m-%d %h:%m ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\input{/home/malty/Templates/letterhead.tex}
+\setkomavar{place}{<++>}
+\setkomavar{signature}{<++>}
 \begin{document}
-\begin{letter}{}
-\opening{<+Opening formula+>}
-
-<++>
-
-\closing{<+Closing formula+>}
-\end{letter}
+\begin{letter}{<++>}
+\opening{<++>}
+\closing{<++>} 
+\end{letter} 
 \end{document}
